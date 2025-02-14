@@ -22,27 +22,27 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
-let posts = []; //Temporary storage for blog posts
+let posts = []; // Temporary storage for blog posts
 
 // Route to render the home page with blog posts
 app.get('/', (req, res) => {
-    res.render('index', { posts: posts });
+  res.render('index', { posts: posts });
 });
 
 // Route to show the form for creating a new post
 app.get('/new', (req, res) => {
-    res.render('new');
+  res.render('new');
 });
 
 // Route to handle new post submission
 app.post('/new', (req, res) => {
-    const newPost = {
-      title: req.body.title,
-      content: req.body.content,
-    };
-    posts.push(newPost); // Add the new post to the list
-    res.redirect('/'); // Redirect to home after submission
-  });
+  const newPost = {
+    title: req.body.title,
+    content: req.body.content,
+  };
+  posts.push(newPost); // Add the new post to the list
+  res.redirect('/'); // Redirect to home after submission
+});
 
 const mongoose = require('mongoose');
 
