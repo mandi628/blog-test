@@ -1,6 +1,10 @@
 # Blog Test CHANGELOG
 
-This is an attempt to create a blog website fromt scratch, without any other software. I am using instructions from ChatGPT.
+This is an attempt to create a blog website fromt scratch, without any other software. 
+I am using instructions from ChatGPT.
+
+2025.03.30 The previous attempt did not work. I am starting over, using instructions from
+flask.palletsprojects.com/en/stable/tutorial (Flask official documentation).
 
 ## [Unreleased]
 
